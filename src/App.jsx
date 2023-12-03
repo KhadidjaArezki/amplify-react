@@ -18,7 +18,7 @@ function App({ signOut }) {
       <Card>
         <Image src={viteLogo} className="logo" alt="Vite logo" />
         <Image src={reactLogo} className="logo react" alt="React logo" />
-        <Heading level={1}>We now have Auth!</Heading>
+        <Heading level={1}>We now have Auth! with Amazon Cognito</Heading>
       </Card>
       <Button onClick={signOut}>Sign Out</Button>
     </View>
