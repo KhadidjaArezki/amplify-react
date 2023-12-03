@@ -2,7 +2,32 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
 
+function App({ signOut }) {
+  return (
+    <View className="App">
+      <Card>
+        <Image src={viteLogo} className="logo" alt="Vite logo" />
+        <Image src={reactLogo} className="logo react" alt="React logo" />
+        <Heading level={1}>We now have Auth!</Heading>
+      </Card>
+      <Button onClick={signOut}>Sign Out</Button>
+    </View>
+  );
+}
+
+export default withAuthenticator(App);
+
+/**
 function App() {
   const [count, setCount] = useState(0)
 
@@ -33,3 +58,4 @@ function App() {
 }
 
 export default App
+**/
